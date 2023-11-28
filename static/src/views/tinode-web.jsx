@@ -201,7 +201,7 @@ class TinodeWeb extends React.Component {
       // Try to re-login on new connection.
       autoLogin: false,
       transport: settings.transport || null,
-      serverAddress: settings.serverAddress || detectServerAddress(),
+      serverAddress: detectServerAddress(),
       secureConnection: settings.secureConnection === undefined ?
         isSecureConnection() : settings.secureConnection,
       serverVersion: "no connection",

@@ -2249,7 +2249,7 @@ __webpack_require__.r(__webpack_exports__);
 const APP_NAME = 'TinodeWeb/' + (_version_js__WEBPACK_IMPORTED_MODULE_0__.PACKAGE_VERSION || '0.21');
 const API_KEY = 'AQEAAAABAAD_rAp4DJh05a1HAwFT3A6K';
 const KNOWN_HOSTS = {
-  hosted: 'web.tinode.co',
+  hosted: 'chat.inithive.com',
   local: 'localhost:6060'
 };
 const DEFAULT_HOST = KNOWN_HOSTS.hosted;
@@ -3149,24 +3149,19 @@ __webpack_require__.r(__webpack_exports__);
 
 function detectServerAddress() {
   let host = _config_js__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_HOST;
-  if (typeof window.location == 'object') {
-    if (window.location.protocol == 'file:' || window.location.hostname == 'localhost') {
-      host = _config_js__WEBPACK_IMPORTED_MODULE_0__.KNOWN_HOSTS.local;
-    } else if (window.location.hostname) {
-      host = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
-    }
-  }
+  console.log("host", host);
   return host;
 }
 function isSecureConnection() {
-  if (typeof window.location == 'object') {
-    return window.location.protocol == 'https:';
+  return true;
+  if (typeof window.location == "object") {
+    return window.location.protocol == "https:";
   }
   return false;
 }
 function isLocalHost() {
-  if (typeof window.location == 'object') {
-    return window.location.hostname == 'localhost';
+  if (typeof window.location == "object") {
+    return window.location.hostname == "localhost";
   }
   return false;
 }
@@ -7355,7 +7350,7 @@ class TinodeWeb extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component)
       ready: false,
       autoLogin: false,
       transport: settings.transport || null,
-      serverAddress: settings.serverAddress || (0,_lib_host_name_js__WEBPACK_IMPORTED_MODULE_16__.detectServerAddress)(),
+      serverAddress: (0,_lib_host_name_js__WEBPACK_IMPORTED_MODULE_16__.detectServerAddress)(),
       secureConnection: settings.secureConnection === undefined ? (0,_lib_host_name_js__WEBPACK_IMPORTED_MODULE_16__.isSecureConnection)() : settings.secureConnection,
       serverVersion: "no connection",
       messageSounds: !settings.messageSoundsOff,
