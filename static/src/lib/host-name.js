@@ -3,7 +3,6 @@ import { KNOWN_HOSTS, DEFAULT_HOST } from "../config.js";
 // Detect server address from the URL
 export function detectServerAddress() {
     let host = DEFAULT_HOST;
-    console.log("host", host)
     return host;
 }
 

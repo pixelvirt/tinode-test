@@ -3149,7 +3149,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function detectServerAddress() {
   let host = _config_js__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_HOST;
-  console.log("host", host);
   return host;
 }
 function isSecureConnection() {
@@ -21807,7 +21806,6 @@ const baseLanguage = normalized.split('-')[0].toLowerCase();
 const htmlLang = messageLoader[normalized] ? language : messageLoader[baseLanguage] ? baseLanguage : 'en';
 document.getElementsByTagName('html')[0].setAttribute('lang', htmlLang);
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('mountPoint'));
-root.setAttribute("notranslate", true);
 messageLoader[htmlLang]().then(messages => root.render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_intl__WEBPACK_IMPORTED_MODULE_2__.IntlProvider, {
   locale: language,
   messages: messages,

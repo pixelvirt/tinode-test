@@ -57,7 +57,6 @@ document.getElementsByTagName('html')[0].setAttribute('lang', htmlLang);
 
 // Render the app.
 const root = createRoot(document.getElementById('mountPoint'));
-root.setAttribute("notranslate", true);
 messageLoader[htmlLang]().then(messages =>
   root.render(
     <IntlProvider locale={language} messages={messages} textComponent={React.Fragment}>
