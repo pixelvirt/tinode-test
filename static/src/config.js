@@ -4,10 +4,10 @@ import { PACKAGE_VERSION } from './version.js';
 export const APP_NAME = 'TinodeWeb/' + (PACKAGE_VERSION || '0.21');
 
 // API key. Use https://github.com/tinode/chat/tree/master/keygen to generate your own
-export const API_KEY = 'AQEAAAABAAD_rAp4DJh05a1HAwFT3A6K';
+export const API_KEY = 'AQAAAAABAAB_kEoWGEd5AnGJnZePlFtB';
 
 // The array of possible hosts to connect to.
-export const KNOWN_HOSTS = {hosted: 'chat.inithive.com', local: 'localhost:6060'};
+export const KNOWN_HOSTS = {hosted: 'chat.pixelvirt.com', local: 'localhost:6060'};
 
 // Default host name and port to connect to.
 export const DEFAULT_HOST = KNOWN_HOSTS.hosted;
