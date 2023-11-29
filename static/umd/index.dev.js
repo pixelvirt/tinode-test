@@ -2249,7 +2249,7 @@ __webpack_require__.r(__webpack_exports__);
 const APP_NAME = 'TinodeWeb/' + (_version_js__WEBPACK_IMPORTED_MODULE_0__.PACKAGE_VERSION || '0.21');
 const API_KEY = 'AQAAAAABAAB_kEoWGEd5AnGJnZePlFtB';
 const KNOWN_HOSTS = {
-  hosted: 'chat.pixelvirt.com:6060',
+  hosted: 'chat.pixelvirt.com',
   local: 'localhost:6060'
 };
 const DEFAULT_HOST = KNOWN_HOSTS.hosted;
