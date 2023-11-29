@@ -8,7 +8,6 @@ export function detectServerAddress() {
 
 // Detect if the page is served over HTTPS.
 export function isSecureConnection() {
-  return true;
   if (typeof window.location == "object") {
     return window.location.protocol == "https:";
   }

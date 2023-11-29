@@ -19,7 +19,6 @@ body {
   color: #666;
   overflow: hidden;
   background-color: silver;
-  box-shadow: inset 0 10rem #3949AB;
   /* the deep-plue stripe accross the top */
 }
 
@@ -598,8 +597,6 @@ div.trusted-badge {
 
 #mountPoint {
   height: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 /* Top-level application layout style: sidepanel + main view */
@@ -635,12 +632,8 @@ div.trusted-badge {
   position: relative;
   display: flex;
   height: 100%;
-  max-width: 84rem;
+  width: 100%;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.25rem;
-  box-shadow: 1px 2px 0.3rem gray;
   background-color: white;
 }
 
@@ -3276,15 +3269,6 @@ ul.phone-country-selector span {
 ul.phone-country-selector span.country {
   text-overflow: ellipsis;
   overflow-x: hidden;
-}
-
-/*
- Very wide monitor.
- */
-@media (min-width: 1440px) {
-  #app-container {
-    max-width: 114rem;
-  }
 }
 
 /*
