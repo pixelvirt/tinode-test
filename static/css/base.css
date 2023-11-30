@@ -1,24 +1,12 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: Roboto, Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1);
-}
-
 /* Basic elements defined */
 
 html,
 body {
   height: 100%;
   width: 100%;
-  font-size: 10pt;
   /* 13.33 px/rem */
   color: #666;
-  overflow: hidden;
-  background-color: silver;
+  /* background-color: silver; */
   /* the deep-plue stripe accross the top */
 }
 
@@ -597,6 +585,7 @@ div.trusted-badge {
 
 #mountPoint {
   height: 100%;
+  margin: 0 16px
 }
 
 /* Top-level application layout style: sidepanel + main view */
@@ -633,12 +622,13 @@ div.trusted-badge {
   display: flex;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background-color: white;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
 }
 
 #sidepanel {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   flex-grow: 0;
@@ -3315,7 +3305,7 @@ ul.phone-country-selector span.country {
 }
 
 #login-form {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

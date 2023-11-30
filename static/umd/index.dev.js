@@ -2249,11 +2249,11 @@ __webpack_require__.r(__webpack_exports__);
 const APP_NAME = 'TinodeWeb/' + (_version_js__WEBPACK_IMPORTED_MODULE_0__.PACKAGE_VERSION || '0.21');
 const API_KEY = 'AQAAAAABAAB_kEoWGEd5AnGJnZePlFtB';
 const KNOWN_HOSTS = {
-  hosted: 'chat.pixelvirt.com',
+  hosted: 'localhost:6060',
   local: 'localhost:6060'
 };
 const DEFAULT_HOST = KNOWN_HOSTS.hosted;
-const LOGGING_ENABLED = true;
+const LOGGING_ENABLED = false;
 const KEYPRESS_DELAY = 3_000;
 const READ_DELAY = 1_500;
 const MIN_TAG_LENGTH = 2;
@@ -3149,17 +3149,24 @@ __webpack_require__.r(__webpack_exports__);
 
 function detectServerAddress() {
   let host = _config_js__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_HOST;
+  if (typeof window.location == 'object') {
+    if (window.location.protocol == 'file:' || window.location.hostname == 'localhost') {
+      host = _config_js__WEBPACK_IMPORTED_MODULE_0__.KNOWN_HOSTS.local;
+    } else if (window.location.hostname) {
+      host = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+    }
+  }
   return host;
 }
 function isSecureConnection() {
-  if (typeof window.location == "object") {
-    return window.location.protocol == "https:";
+  if (typeof window.location == 'object') {
+    return window.location.protocol == 'https:';
   }
   return false;
 }
 function isLocalHost() {
-  if (typeof window.location == "object") {
-    return window.location.hostname == "localhost";
+  if (typeof window.location == 'object') {
+    return window.location.hostname == 'localhost';
   }
   return false;
 }
