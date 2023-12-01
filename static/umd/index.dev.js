@@ -2250,7 +2250,7 @@ const APP_NAME = 'TinodeWeb/' + (_version_js__WEBPACK_IMPORTED_MODULE_0__.PACKAG
 const API_KEY = 'AQAAAAABAABwaRFIh632x8XCXwPORrOe';
 const KNOWN_HOSTS = {
   hosted: 'chat.pixelvirt.com',
-  local: 'localhost:6060'
+  local: 'chat.pixelvirt.com'
 };
 const DEFAULT_HOST = KNOWN_HOSTS.hosted;
 const LOGGING_ENABLED = false;
@@ -3149,13 +3149,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function detectServerAddress() {
   let host = _config_js__WEBPACK_IMPORTED_MODULE_0__.DEFAULT_HOST;
-  if (typeof window.location == 'object') {
-    if (window.location.protocol == 'file:' || window.location.hostname == 'localhost') {
-      host = _config_js__WEBPACK_IMPORTED_MODULE_0__.KNOWN_HOSTS.local;
-    } else if (window.location.hostname) {
-      host = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
-    }
-  }
   return host;
 }
 function isSecureConnection() {
