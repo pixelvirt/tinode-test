@@ -2247,9 +2247,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _version_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./version.js */ "./src/version.js");
 
 const APP_NAME = 'TinodeWeb/' + (_version_js__WEBPACK_IMPORTED_MODULE_0__.PACKAGE_VERSION || '0.21');
-const API_KEY = 'AQAAAAABAAB_kEoWGEd5AnGJnZePlFtB';
+const API_KEY = 'AQAAAAABAABwaRFIh632x8XCXwPORrOe';
 const KNOWN_HOSTS = {
-  hosted: 'localhost:6060',
+  hosted: 'chat.pixelvirt.com',
   local: 'localhost:6060'
 };
 const DEFAULT_HOST = KNOWN_HOSTS.hosted;

@@ -586,6 +586,7 @@ div.trusted-badge {
 #mountPoint {
   height: 100%;
   margin: 0 16px
+  
 }
 
 /* Top-level application layout style: sidepanel + main view */
@@ -622,9 +623,8 @@ div.trusted-badge {
   display: flex;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background-color: white;
-  padding-left: calc(var(--bs-gutter-x) * .5);
-  padding-right: calc(var(--bs-gutter-x) * .5);
 }
 
 #sidepanel {
